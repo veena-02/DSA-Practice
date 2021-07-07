@@ -93,5 +93,5 @@ vector<int> findSubarray(int a[], int n) {
 	    return subArr;
 	}
 ```
-[Understanding Reference Video:](https://www.youtube.com/watch?v=VMtyGnNcdPw) 
+[Understanding Reference Video](https://www.youtube.com/watch?v=VMtyGnNcdPw) 
 ---
