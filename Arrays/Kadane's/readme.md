@@ -15,6 +15,7 @@ class Solution {
   }
 };
 ```
+---
 ### Flip Bits 
 [Problem Statement](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118820/offering/1381872)
 How to know that the problem is to be solved using Kadane's Algorithm:
@@ -50,6 +51,7 @@ int flipBits(int* a, int n)
 }
 
 ```
+---
 ### Print the maximum subarray of non-ve array elements
 [Problem Statement](https://practice.geeksforgeeks.org/problems/maximum-sub-array5443/1#)
 
@@ -92,3 +94,4 @@ vector<int> findSubarray(int a[], int n) {
 	}
 ```
 [Understanding Reference Video:](https://www.youtube.com/watch?v=VMtyGnNcdPw) 
+---
