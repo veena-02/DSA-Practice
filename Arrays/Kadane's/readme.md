@@ -1,4 +1,10 @@
-### Maximum Subarray Sum
+1. [Maximum Subarray Sum](#p1)
+2. [Flip Bits](#p2)
+3. [Print the subarray of non-ve array elements which has maxm sum](#p3)
+4. [K-Concatenation Maximum Sum](#p4)
+5. [Maximum Product Subarray](#p5)
+
+### <a id="p1">Maximum Subarray Sum</a>
 ```
 class Solution {
  public:
@@ -16,7 +22,7 @@ class Solution {
 };
 ```
 ---
-### Flip Bits 
+### <a id="p2">Flip Bits</a> 
 [Problem Statement](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118820/offering/1381872)
 How to know that the problem is to be solved using Kadane's Algorithm:
 - Finding something from Subarray
@@ -52,7 +58,7 @@ int flipBits(int* a, int n)
 
 ```
 ---
-### Print the maximum subarray of non-ve array elements
+### <a id="p3">Print the subarray of non-ve array elements which has maxm sum</a>
 [Problem Statement](https://practice.geeksforgeeks.org/problems/maximum-sub-array5443/1#)
 
 CODE:
@@ -95,3 +101,35 @@ vector<int> findSubarray(int a[], int n) {
 ```
 [Understanding Reference Video](https://www.youtube.com/watch?v=VMtyGnNcdPw) 
 ---
+### <a id="p4">K-Concatenation Maximum Sum</a>
+[Problem Statement](https://leetcode.com/problems/k-concatenation-maximum-sum/)
+
+Method: 
+
+CODE:
+```
+
+```
+[Understanding Reference Video](https://www.youtube.com/watch?v=qnoOu5Usb4o)
+
+### <a id="p5">Maximum Product Subarray</a>
+[Problem Statement](https://leetcode.com/problems/maximum-product-subarray/)
+
+Code:
+```
+int maxProduct(vector<int>& nums) {
+        int currMax=nums[0];
+        int currMin=nums[0];
+        int maxProduct=nums[0];
+	int n=nums.size();
+	
+        for(int i=1;i<n;i++){
+            int temp=currMax;
+            currMax=max(nums[i]*currMax,max(nums[i]*currMin,nums[i]));
+            currMin=min(nums[i]*temp,min(nums[i]*currMin,nums[i]));
+            maxProduct=max(maxProduct,currMax);
+            cout<<currMax<<" "<<currMin<<" "<<maxProduct<<endl;
+        }
+        return maxProduct;
+ }
+```
