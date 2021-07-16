@@ -4,7 +4,8 @@ The primary condition for using the Two Pointers technique is monotonicity.
 [Longest Mountain Subarray](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118509/offering/1376554)
 
 CODE:
-`
+
+```
 int longestMountain(int *arr, int n)
 {
     if(n==1)return 0;
@@ -28,13 +29,13 @@ int longestMountain(int *arr, int n)
     }
     return mx;
 }
-`
+```
 ---
 
 [Find All Triplets With Zero Sum](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118509/offering/1376555?leftPanelTab=0)
 
 CODE:
-`
+````
 /*
         Time Complexity : O(N^2)
         Space Complexity : O(N),
@@ -96,4 +97,4 @@ vector<vector<int>> findTriplets(vector<int>arr, int n) {
     }
     return ans;
 }
-`
+```
