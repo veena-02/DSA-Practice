@@ -1,4 +1,10 @@
-## SWAP ODD AND EVEN BITS OF A NUMBER:
+## POINTS TO REMEMBER:
+1. Sort in descending order
+```
+  sort(vect.begin(),vect.end(),greater<int>());
+```
+
+### SWAP ODD AND EVEN BITS OF A NUMBER:
 
 1) Get all even bits of x by doing bitwise and of x with 0xAAAAAAAA. The number 0xAAAAAAAA is a 32 bit number with all even bits set as 1 and all odd bits as 0. 
 2) Get all odd bits of x by doing bitwise and of x with 0x55555555. The number 0x55555555 is a 32 bit number with all odd bits set as 1 and all even bits as 0. 
