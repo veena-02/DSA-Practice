@@ -1,4 +1,4 @@
-### Count all sub-arrays having sum divisible by k
+## Q.1 Count all sub-arrays having sum divisible by k
 
 Consider the subarray sum equals K problem. Here, we need to find let's say a right pointer R and a left pointer L which forms a subarray from L to R[inclusive] whose sum equals K. I.e,
 
@@ -40,3 +40,31 @@ public:
 ```
 
 [Video Explanation](https://www.youtube.com/watch?v=QM0klnvTQzk)
+
+## Q.2 Longest Subarray with Sum Divisible by K | Hashmaps 
+
+[Video Explanation](https://www.youtube.com/watch?v=GrV3MTR_Uk0)
+
+```
+int longSubarrWthSumDivByK(int arr[], int n, int k)
+	{
+	    vector<int> idxForIthMod(k,-2);
+	    idxForIthMod[0]=-1;
+	    int maxLength=0;
+	    int pref=0;
+	    
+	    for(int i=0;i<n;i++){
+	        pref=pref+arr[i];
+	        pref%=k;
+	        if(pref<0)pref+=k;
+	        if(idxForIthMod[pref]==-2){
+	            idxForIthMod[pref]=i;
+	        }
+	        else{
+	            int x=i-idxForIthMod[pref];
+	            maxLength=max(x,maxLength);
+	        }
+	    }
+	    return maxLength;
+	}
+```
